@@ -1,0 +1,32 @@
+#spinner-loading {
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+}
+@keyframes ui-progress-spinner-color {
+
+    100%,
+    0% {
+        stroke: $cor-azul-claro-padrao;
+    }
+
+    40% {
+        stroke: $cor-azul-claro-padrao;
+    }
+
+    66% {
+        stroke: $cor-azul-claro-padrao;
+    }
+
+    80%,
+    90% {
+        stroke: $cor-azul-claro-padrao;
+    }
+}

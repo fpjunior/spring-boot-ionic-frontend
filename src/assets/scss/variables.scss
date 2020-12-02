@@ -1,0 +1,46 @@
+@import "../scss/colors.scss";
+
+@mixin transitionall3seaseinout {
+	-webkit-transition:all .3s ease-in-out;
+	-moz-transition:all .3s ease-in-out;
+	-o-transition:all .3s ease-in-out;
+	transition:all .3s ease-in-out;
+}
+@mixin borderradius0 {
+	border-radius:0;
+	-webkit-border-radius:0;
+}
+
+@mixin fontePadrao {
+	font-family:'Roboto Regular' !important;	
+}
+
+@mixin fontePadraoComDefinicoes {
+	font-family:'Roboto Regular';
+	font-weight: 300;  
+}
+
+@mixin fontePadraoBotoes {
+	font-family:'Roboto Regular';
+	font-weight: 400;  
+}
+
+@mixin definirColoresToast($backgroundColor) {
+	background-color: $backgroundColor !important;
+    border: 0 none;
+	@include fontePadraoComDefinicoes;
+	opacity: 10 !important;
+}
+
+@mixin definirElementoInvalido {
+	border-bottom: 1px solid #e13131;      
+}
+
+@mixin fonteTamanhoGeral {
+	font-size: 13px;
+}
+
+@mixin fontePadraoCondensed {
+	font-family:'Roboto Condensed Bold' !important;
+	font-weight: 300;  
+}

@@ -1,0 +1,64 @@
+@import 'colors.scss';
+@import 'variables.scss';
+
+
+.btn-padrao {
+    border: none !important;
+    border-radius: 4px;
+    height: 32px;
+    font-size: 14px;
+    color: $cor-branco-padrao;
+}
+
+.cancelar-btn {
+    background-color: $cor-cinza-escuro-padrao !important;
+    border-color: $cor-cinza-escuro-padrao !important;
+    width: 112px;
+    &:hover{
+        background-color: $cor-hover-cancelar !important;
+        border-color: $cor-hover-cancelar !important;
+    }
+}
+
+.ui-calendar.ui-calendar-w-btn .ui-datepicker-trigger.ui-button{
+    background-color: $cor-azul-escuro-padrao !important;
+    width: 96px;
+    height: 32px;
+    &:hover{
+        background-color: $cor-button-hover !important;
+    }
+
+    &:disabled {
+        background-color: $cor-azul-escuro-padrao;
+    }
+}
+.ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active{
+    &:hover{
+        background-color: $cor-button-hover !important;
+    }
+
+    &:disabled {
+        background-color: $cor-azul-escuro-padrao;
+    }
+}
+
+.salvar-btn, 
+.incluirButton,
+.ui-inputgroup .ui-button,
+.ui-calendar-button,
+.ui-dialog .ui-dialog-footer button,
+.inserir-lista {
+    background-color: $cor-azul-escuro-padrao !important;
+    width: 96px;
+    &:hover{
+        background-color: $cor-button-hover !important;
+    }
+
+    &:disabled {
+        background-color: $cor-azul-escuro-padrao;
+    }
+}
+
+.wrap-button {
+    width: auto;
+}

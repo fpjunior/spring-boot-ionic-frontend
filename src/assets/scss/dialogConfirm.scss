@@ -1,0 +1,37 @@
+.confirmacao {
+    .ui-dialog {
+
+        .ui-dialog-footer {
+            padding: 1em 1em;
+            border-radius: 0px 0px 4px 4px;
+            }
+        .ui-dialog-titlebar {
+            background: $cor-branco-bg;
+            padding-left: 30px;
+
+            .ui-dialog-title {
+                font-style: normal;
+                font-weight: 500;
+                font-size: 18px;
+                color: $cor-cinza-escuro-padrao-alt;
+            }
+        }
+
+        .ui-dialog-content {
+            padding-top: 26px;
+            padding-left: 32px;
+        }
+
+        .ui-dialog-titlebar,
+        .ui-dialog-content,
+        .ui-dialog-footer {
+            border: none;
+           
+        }
+    }
+    .ui-chkbox .ui-chkbox-box.ui-state-active {
+        background-color: $cor-azul-claro-padrao;
+        border-color: $cor-azul-claro-padrao;
+
+    }
+}
