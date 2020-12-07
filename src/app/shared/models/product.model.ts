@@ -1,9 +1,8 @@
 export interface ProductModel {
   id?: number;
-  codigoErp: string;
-  apresentacao: string;
-  nomeComercial: string;
-  nomeComercialComApresentacao: string;
-  unidadeMedidaAnvisa: string;
-  codigoBarrasPrincipal: string;
+  nome: string;
+  Idade: number;
+  email: string;
+  cpfOuCnpj: string;
+  tipo: string;
 }

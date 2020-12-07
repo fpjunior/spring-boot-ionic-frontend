@@ -49,7 +49,7 @@ export class ProductsService {
   };
 
 
-  buscarProducts() {
+  buscarUsuarios() {
     return this.http.post(url, this.httpOptions)
     .toPromise()
     .then((res) => res)

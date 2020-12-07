@@ -6,9 +6,8 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import 'jspdf-autotable';
 import { UserOptions } from 'jspdf-autotable';
-import { ProductsService } from './products.service';
 import { ProductService } from '../../service/product.service';
-import { FilterUtils } from 'primeng/utils';
+import { Product } from './product';
 
 interface jsPDFWithPlugin extends jsPDF {
   autoTable: (options: UserOptions) => jsPDF;
@@ -27,6 +26,7 @@ export class ProductsComponent implements OnInit {
 
   cols: any[];
   yearTimeout: any;
+  usuarios: ProductModel[];
 
   constructor(
     private productService: ProductService,
@@ -34,41 +34,16 @@ export class ProductsComponent implements OnInit {
 
   dadosParaPreencherTabela;
 
-  colunasTabela = [
-    { hintName: 'id', field: 'id', header: 'ID', showCol: true },
-    { hintName: 'Nome', field: 'nome', header: 'NOME', showCol: true },
-    { hintName: 'Idade', field: 'idade', header: 'IDADE', showCol: true },
-  ];
-
-  colunasSelecionadas = this.colunasTabela;
-
-  ngOnInit(): void {
-    console.log(this.productService.buscarProducts());
-    console.log('teste');
-    this.cols = [
-      { field: 'id', header: 'Código ERP' },
-      { field: 'nome', header: 'Apresentação' },
-      { field: 'idade', header: 'Nome Comercial' },
-    ];
+ 
+  ngOnInit() {
+    this.productService.buscarUsuarios()
+    .then(products => this.usuarios = products);
 
   }
 
-  FilterUtils: any['custom'] = (value, filter): boolean => {
-    if (filter === undefined || filter === null || filter.trim() === '') {
-      return true;
-    }
-
-    if (value === undefined || value === null) {
-      return false;
-    }
-
-    return parseInt(filter) > value;
-  };
-
-
 
   preencherTabela() {
-    this.productService.buscarProducts().then((res) => {
+    this.productService.buscarUsuarios().then((res) => {
       this.dadosParaPreencherTabela = res.data.content;
     }).catch((err) => {
       alert('deu erro');

@@ -7,7 +7,6 @@ import { ProductsComponent } from './pages/products/products.component';
 import { TableModule } from 'primeng/table';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
-import { RegisterProductsComponent } from './pages/register-products/register-products.component';
 import { HomeComponent } from './layout/home/home.component';
 import { ToolbarModule } from 'primeng/toolbar';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -31,7 +30,7 @@ import { AccordionModule } from 'primeng/accordion';
 import { PickListModule } from 'primeng/picklist';
 
 @NgModule({
-  declarations: [ProductsComponent, RegisterProductsComponent, HomeComponent, CadastroComponent],
+  declarations: [ProductsComponent, HomeComponent, CadastroComponent],
   imports: [
     CommonModule,
     MainRoutingModule,

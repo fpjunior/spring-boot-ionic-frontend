@@ -6,7 +6,6 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from '../app/app-routing';
 import { AppComponent } from './app.component';
-import { TabelaListaCadastradosComponent } from './shared/components/tabela-lista-cadastrados/tabela-lista-cadastrados.component';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FontAwesomeModule } from '@fortawesome/fontawesome-free';
@@ -24,8 +23,9 @@ import { LightboxModule } from 'primeng/lightbox';
 // import { HttpInterceptorModule } from './shared/interceptors/http-interceptor/http-interceptor.module';
 
 @NgModule({
-  declarations: [AppComponent,
-    TabelaListaCadastradosComponent],
+  declarations: [
+    AppComponent,
+    ],
   imports: [
     BrowserModule,
     AppRoutingModule,
