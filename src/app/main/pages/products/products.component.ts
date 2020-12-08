@@ -28,18 +28,45 @@ export class ProductsComponent implements OnInit {
   yearTimeout: any;
   usuarios: ProductModel[];
 
+  first = 0;
+  rows = 10;
+  loading: boolean = true;
+
+  dadosParaPreencherTabela;
+
   constructor(
     private productService: ProductService,
     private router: Router) { }
 
-  dadosParaPreencherTabela;
 
  
   ngOnInit() {
     this.productService.buscarUsuarios()
     .then(products => this.usuarios = products);
-
+    this.loading = false;
   }
+
+  next(){
+    this.first = this.first + this.rows;
+  }
+
+  prev(){
+    this.first = this.first - this.rows;
+  }
+
+  reset() {
+    this.first = 0;
+}
+
+isLastPage(): boolean {
+    return this.usuarios ? this.first === (this.usuarios.length - this.rows): true;
+}
+
+isFirstPage(): boolean {
+    return this.usuarios ? this.first === 0 : true;
+}
+
+
 
 
   preencherTabela() {

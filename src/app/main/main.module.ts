@@ -28,6 +28,7 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { AccordionModule } from 'primeng/accordion';
 import { PickListModule } from 'primeng/picklist';
+import {MultiSelectModule} from 'primeng/multiselect';
 
 @NgModule({
   declarations: [ProductsComponent, HomeComponent, CadastroComponent],
@@ -55,7 +56,8 @@ import { PickListModule } from 'primeng/picklist';
     ConfirmDialogModule,
     RadioButtonModule,
     AccordionModule,
-    PickListModule
+    PickListModule,
+    MultiSelectModule
   ],
 })
 export class MainModule { }
